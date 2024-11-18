@@ -1,0 +1,56 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-countries
+      author: eralex
+      changes:
+        - sqlFile:
+            path: forward/create_countries.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/create_countries_down.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 2-create-olympics
+      author: eralex
+      changes:
+        - sqlFile:
+            path: forward/create_olympics.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/create_olympics_down.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 3-create-players
+      author: eralex
+      changes:
+        - sqlFile:
+            path: forward/create_players.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/create_players_down.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 4-create-events
+      author: eralex
+      changes:
+        - sqlFile:
+            path: forward/create_events.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/create_events_down.sql
+            relativeToChangelogFile: true
+  - changeSet:
+      id: 5-create-results
+      author: eralex
+      changes:
+        - sqlFile:
+            path: forward/create_results.sql
+            relativeToChangelogFile: true
+      rollback:
+        - sqlFile:
+            path: rollback/create_results_down.sql
+            relativeToChangelogFile: true
